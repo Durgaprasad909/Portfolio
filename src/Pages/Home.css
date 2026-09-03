@@ -1,0 +1,654 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  min-height: 620px;
+  padding: 70px 7%;
+  background: #050b1f;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+  overflow:hidden;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hello {
+  color: #8b9cff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+/* Main Heading */
+
+.hero h1 {
+  font-size: clamp(50px, 6vw, 82px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    
+    #a78bfa,
+    #3b82f6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Job Title */
+
+.hero h2 {
+  font-size: 25px;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+
+/* Small Line */
+
+.hero-line {
+  width: 35px;
+
+  height: 2px;
+
+  background: #8b5cf6;
+
+  margin-bottom: 16px;
+}
+
+
+/* Description */
+
+.hero-description {
+  max-width: 580px;
+
+  color: #b8c0d0;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 28px;
+
+  flex-wrap: wrap;
+}
+
+
+/* Primary */
+
+.primary-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 13px 21px;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  background: linear-gradient(
+    90deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 12px 21px;
+
+  border-radius: 8px;
+
+  border: 1px solid #657083;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  border-color: #8b5cf6;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.social-links {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 27px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #4b5563;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #6366f1;
+
+  border-color: #6366f1;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image-container {
+  position: relative;
+
+  height: 500px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+/* Gradient Circle */
+
+.image-circle {
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #6d28d9,
+    #2563eb
+  );
+
+  opacity: 0.9;
+}
+
+
+/* Profile */
+
+.profile-image {
+  position: relative;
+
+  z-index: 2;
+
+  width: 420px;
+  border-bottom: 3px solid  #6d28d9;
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  align-self: flex-end;
+}
+
+
+/* Decorative dots */
+
+.small-dot {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #6366f1;
+
+  z-index: 3;
+}
+
+.dot-one {
+  top: 100px;
+  right: 30px;
+}
+
+.dot-two {
+  bottom: 100px;
+  left: 10px;
+}
+
+.dot-three {
+  top: 70px;
+  left: 100px;
+}
+
+
+/* =====================================================
+   QUICK INTRO
+===================================================== */
+
+.quick-intro {
+  width: 100%;
+
+  padding: 45px 7%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  background: #ffffff;
+}
+
+
+.intro-card {
+  padding: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  gap: 18px;
+
+  background: #ffffff;
+
+  transition: 0.3s;
+}
+
+.intro-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #a78bfa;
+}
+
+
+.intro-number {
+  font-size: 14px;
+
+  color: #6366f1;
+
+  font-weight: 700;
+}
+
+
+.intro-card h3 {
+  font-size: 17px;
+
+  margin-bottom: 8px;
+}
+
+
+.intro-card p {
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 60px 5%;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .profile-image {
+    width: 360px;
+  }
+
+  .image-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .quick-intro {
+    padding: 40px 5%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* ================= NAVBAR ================= */
+
+  .navbar {
+    height: 70px;
+
+    padding: 0 6%;
+  }
+
+
+  /* Hide desktop links */
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: #080f27;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+  }
+
+
+  /* Show menu when clicked */
+
+  .nav-links.mobile-active {
+    display: flex;
+  }
+
+
+  .nav-links a {
+    width: 100%;
+
+    padding: 15px 10px;
+
+    border-bottom: 1px solid #1e293b;
+  }
+
+
+  /* Hide Resume */
+
+  .resume-btn {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-btn {
+    display: block;
+  }
+
+
+  /* ================= HERO ================= */
+
+  .hero {
+    min-height: auto;
+
+    padding: 60px 6% 70px;
+
+    grid-template-columns: 1fr;
+
+    text-align: left;
+
+    gap: 30px;
+  }
+
+
+  /* Heading */
+
+  .hero h1 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+
+  /* Buttons */
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 17px;
+  }
+
+
+  /* ================= IMAGE ================= */
+
+  .hero-image-container {
+    height: 350px;
+
+    margin-top: 10px;
+  }
+
+
+  .profile-image {
+    width: 300px;
+  }
+
+
+  .image-circle {
+    width: 250px;
+
+    height: 250px;
+  }
+
+
+  /* ================= INTRO ================= */
+
+  .quick-intro {
+    grid-template-columns: 1fr;
+
+    padding: 35px 6%;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 19px;
+  }
+
+
+  .hero {
+    padding-top: 45px;
+  }
+
+
+  .hello {
+    font-size: 17px;
+  }
+
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+
+  .hero-description {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .primary-btn,
+  .secondary-btn {
+    justify-content: center;
+  }
+
+
+  .hero-image-container {
+    height: 300px;
+  }
+
+
+  .profile-image {
+    width: 260px;
+  }
+
+
+  .image-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+
+  .intro-card {
+    padding: 20px;
+  }
+
+}

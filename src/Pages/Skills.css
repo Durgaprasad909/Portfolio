@@ -1,0 +1,246 @@
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-section {
+  width: 100%;
+
+  padding: 90px 7%;
+
+  background: #f8fafc;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.skills-heading {
+  max-width: 650px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+
+.section-label {
+  color: #6366f1;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+
+.skills-heading h2 {
+  font-size: 36px;
+
+  color: #111827;
+
+  margin-bottom: 15px;
+}
+
+
+.skills-description {
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SKILLS GRID
+========================= */
+
+.skills-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================
+   SKILL CARD
+========================= */
+
+.skill-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  padding: 25px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+
+.skill-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #8b5cf6;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #f1f5ff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   SKILL INFO
+========================= */
+
+.skill-info h3 {
+  color: #111827;
+
+  font-size: 15px;
+
+  margin-bottom: 5px;
+}
+
+
+.skill-info p {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .skills-section {
+    padding: 75px 5%;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .skills-section {
+    padding: 65px 6%;
+  }
+
+
+  .skills-heading {
+    margin-bottom: 35px;
+  }
+
+
+  .skills-heading h2 {
+    font-size: 29px;
+  }
+
+
+  .skills-description {
+    font-size: 14px;
+  }
+
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .skill-card {
+    padding: 18px 14px;
+
+    gap: 10px;
+  }
+
+
+  .skill-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 20px;
+  }
+
+
+  .skill-info h3 {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .skills-section {
+    padding: 55px 5%;
+  }
+
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .skill-card {
+    padding: 16px;
+  }
+
+}

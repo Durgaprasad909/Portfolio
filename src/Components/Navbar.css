@@ -1,0 +1,215 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  background: #050b1f;
+  color: white;
+
+  position: relative;
+  z-index: 100;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #8b5cf6;
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #d1d5db;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #8b5cf6;
+}
+
+
+/* =========================
+   RESUME BUTTON
+========================= */
+
+.resume-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 18px;
+
+  border: 1px solid #596174;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 13px;
+
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  border-color: #8b5cf6;
+  background: #8b5cf6;
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn {
+  display: none;
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 70px;
+
+    padding: 0 6%;
+  }
+
+
+  /* Hide normal navigation */
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px 6%;
+
+    background: #080f27;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+  }
+
+
+  /* Show menu when clicked */
+
+  .nav-links.mobile-active {
+    display: flex;
+  }
+
+
+  /* Mobile links */
+
+  .nav-links a {
+    width: 100%;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #1e293b;
+  }
+
+
+  /* Hide resume */
+
+  .resume-btn {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-btn {
+    display: block;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .menu-btn {
+    font-size: 24px;
+  }
+
+}
